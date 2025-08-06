@@ -3,6 +3,19 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Ignore local environment files and API keys
+.env
+
+# Ignore the FAISS vector store folder
+faiss_index/
+
+# Other common files to ignore for Python projects
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+
 # User-specific files
 *.rsuser
 *.suo
