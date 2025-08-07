@@ -8,3 +8,8 @@ python-dotenv
 groq
 openai
 faiss-cpu
+pandas
+plotly
+matplotlib
+google-generativeai
+nest_asyncio
