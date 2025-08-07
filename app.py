@@ -345,7 +345,7 @@ def main():
         background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-light) 100%);
         font-family: 'Inter', sans-serif; color: var(--text-primary);
     }
-    #MainMenu, footer, header { visibility: hidden; }
+    /*#MainMenu, footer, header { visibility: hidden; }*/
     .css-1d391kg { background: var(--surface-color); }
     .hero-section { text-align: center; padding: 3rem 0; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); border-radius: 20px; margin: 2rem 0; }
     .hero-title { font-size: 3.5rem; font-weight: 700; }
