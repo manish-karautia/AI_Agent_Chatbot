@@ -125,7 +125,7 @@ def execute_generated_code(code, df):
 def get_gemini_rag_response(user_question, response_mode):
     if not os.path.exists("faiss_index"):
         return "Please upload and process PDF files first."
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
     db = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)
     docs = db.similarity_search(user_question)
 
