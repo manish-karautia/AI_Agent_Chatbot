@@ -11,7 +11,7 @@ def get_embedding_model():
     """
     # Ensure GOOGLE_API_KEY is loaded from .env
     # The model name "models/embedding-001" is standard for Google's embedding model
-    return GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+    return GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
 
 # You might also want to add a function here to handle model configuration
 # if there were different embedding models to choose from.
