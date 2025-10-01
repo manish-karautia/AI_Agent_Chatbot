@@ -69,7 +69,7 @@ def get_conversational_chain(response_mode="detailed"):
     Answer:
     """
     prompt_template = detailed_template if response_mode == "detailed" else concise_template
-    model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
+    model = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", temperature=0.3)
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
     chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
     return chain
@@ -143,7 +143,7 @@ def get_gemini_rag_response(user_question, response_mode):
             search_context = "\n".join(search_results)
             web_synthesis_prompt = f"Synthesize info from Document Context and Web Search Results to answer.\n\nContext: {docs}\n\nWeb Search: {search_context}\n\nQuestion: {user_question}\n\nAnswer:"
             try:
-                synthesis_model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.5)
+                synthesis_model = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", temperature=0.5)
                 final_response = synthesis_model.invoke(web_synthesis_prompt).content
             except Exception as e:
                 final_response = f"Error during web synthesis: {e}"
