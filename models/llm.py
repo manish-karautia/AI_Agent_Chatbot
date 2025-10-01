@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv() # Load environment variables
 
-def get_chat_model(model_name="gemini-1.5-flash", temperature=0.3):
+def get_chat_model(model_name="gemini-pro", temperature=0.3):
     """
     Initializes and returns the Google Generative AI Chat Model.
     """
