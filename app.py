@@ -158,7 +158,7 @@ def get_groq_chat_response(user_question, response_mode, chat_history):
     messages.append({"role": "user", "content": user_question})
 
     try:
-        response = groq_client.chat.completions.create(messages=messages, model="llama3-70b-8192")
+        response = groq_client.chat.completions.create(messages=messages, model="llama-3.3-70b-versatile")
         return response.choices[0].message.content
     except Exception as e:
         return f"Error from Groq API: {e}"
